@@ -1,19 +1,23 @@
 
+body{
+		font-family: sans-serif;
+}
+
 .heading{
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .flex-container{
 	display: flex;
-	border: 1px solid red;
+	border: 1px solid #555;
 	padding: 10px;
 	min-height: 200px;
 }
 
 .flex-item{
-	border: 1px solid lightgrey;
-	background-color: #cc99ff;
+	border: 1px solid grey;
+	background-color: #ccc;
 	padding: 20px;
 }
 
@@ -30,6 +34,11 @@
 .code{
 	padding: 20px;
 	width: 100%;
+}
+
+.info-box{
+	display:inline-block;
+	vertical-align: top;
 }
 
 .slide-container{
