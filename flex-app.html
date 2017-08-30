@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="flex-app-style.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<h1 class="heading">Flex Example</h1>
+		
+		<div class="menu-container">
+			
+			<div class="menu">
+				<div class="slide-container">
+					<label>Item width:</label><br>
+					<input type="range" min="0" max="800" value="200" class="slider" id="item-width-slider" oninput="set_item_width(this.value)" onchange="set_item_width(this.value)">
+					<input type="text" class="text-input" id="item-width-input" onchange="set_item_width(this.value)">
+					<button class="button" onclick="remove_width()"><span style="color: red;">X</span></button>
+				</div>
+				
+				<div class="slide-container">
+					<label>Item height:</label><br>
+					<input type="range" min="0" max="200" value="40" class="slider" id="item-height-slider" oninput="set_item_height(this.value)" onchange="set_item_height(this.value)">
+					<input type="text" class="text-input" id="item-height-input" onchange="set_height_width(this.value)">
+					<button class="button" onclick="remove_height()"><span style="color: red;">X</span></button>
+				</div>
+				
+				<button class="button" onclick="add_text(1)">Text 1</button>
+				<button class="button" onclick="add_text(2)">Text 2</button>
+			</div>
+			
+			<div class="menu">				
+				<div class="select-container">
+					<label>justify-content</label><br>
+					<select class="select-box" id="justify-content-select">
+						<option>flex-start</option>
+						<option>flex-end</option>
+						<option>center</option>
+						<option>space-between</option>
+						<option>space-around</option>
+					</select>
+				</div>
+				
+				<div class="select-container">
+					<label>flex-direction</label><br>
+					<select class="select-box" id="flex-direction-select">
+						<option>row</option>
+						<option>row-reverse</option>
+						<option>column</option>
+						<option>column-reverse</option>
+					</select>
+				</div>
+				
+				<div class="select-container">
+					<label>flex-wrap</label><br>
+					<select class="select-box" id="flex-wrap-select">
+						<option>nowrap</option>
+						<option>wrap</option>
+						<option>wrap-reverse</option>
+					</select>
+				</div>			
+			</div>
+			
+			<div class="menu">
+				<div class="select-container">
+					<label>align-items</label><br>
+					<select class="select-box" id="align-items-select">
+						<option>stretch</option>
+						<option>center</option>
+						<option>flex-start</option>
+						<option>flex-end</option>
+						<option>baseline</option>
+					</select>
+				</div>
+				
+				<div class="select-container">
+					<label>align-content</label><br>
+					<select class="select-box" id="align-content-select">
+						<option>stretch</option>
+						<option>center</option>
+						<option>flex-start</option>
+						<option>flex-end</option>
+						<option>space-between</option>
+						<option>space-around</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="code">
+			
+			</div>
+		</div>
+		
+		<div class="flex-container">
+			<div class="flex-item" id="item1"></div>
+			<div class="flex-item" id="item2"></div>
+			<div class="flex-item" id="item3"></div>
+			<div class="flex-item" id="item4"></div>
+		</div>
+		
+		<div class="notes"><br>
+			<b>align-items</b>: to see the effects, select 'text 2', set flex-wrap to nowrap, change align-items.<br>
+			<b>align-content</b>: to see the effects, select 'text 1', set flex-wrap to wrap, increase item width until they wrap, change align-content.
+			<br><br>
+			The red x's remove the width and height property entirely from the items so that the browser sizes them as it sees fit.
+		</div>
+		
+		<br><br><br><br>
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		  crossorigin="anonymous"></script>
+		<script src="script.js"></script>
+		
+	</body>
+</html>
